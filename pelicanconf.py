@@ -1,7 +1,7 @@
 
 
 AUTHOR          = 'Ashwin'  # use your name
-SITENAME        = 'title' # use title
+SITENAME        = 'Python Notes' # use title
 GITHUB_USERNAME = 'ashwinsuresh-ngr' # use your username
 
 
