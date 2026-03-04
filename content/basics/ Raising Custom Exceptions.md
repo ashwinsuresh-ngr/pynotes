@@ -1,6 +1,6 @@
 ---
 title:  Raising Custom Exceptions
-date: 2026-03-03
+date: 2026-03-04
 author: Your Name
 cell_count: 1
 score: 0
