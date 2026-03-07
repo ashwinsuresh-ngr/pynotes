@@ -1,6 +1,6 @@
 ---
 title: What Is Inheritance
-date: 2026-03-04
+date: 2026-03-07
 author: Your Name
 cell_count: 2
 score: 0

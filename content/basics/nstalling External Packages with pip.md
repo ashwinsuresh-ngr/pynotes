@@ -1,6 +1,6 @@
 ---
 title: Nstalling External Packages With Pip
-date: 2026-03-04
+date: 2026-03-07
 author: Your Name
 cell_count: 3
 score: 0
