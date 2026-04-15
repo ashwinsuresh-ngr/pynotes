@@ -1,0 +1,20 @@
+---
+title: If-Else Expressions
+date: 2026-04-15
+author: Your Name
+cell_count: 2
+score: 0
+---
+
+```python
+status = ["even" if x % 2 == 0 else "odd" for x in range(5)]
+```
+
+
+```python
+
+```
+
+
+---
+**Score: 0**

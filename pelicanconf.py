@@ -33,7 +33,7 @@ if os.getenv("PELICAN_ENV") == "local":
     print("Running Pelican in LOCAL mode")
 else:
     # Remote settings for GitHub Pages
-    SITEURL         = f'https://{GITHUB_USERNAME}.github.io/{FOLDER_NAME}'
+    SITEURL         = f'https://ashwinsuresh-ngr.github.io/{FOLDER_NAME}'
     RELATIVE_URLS   = False
     print(f"Running Pelican in REMOTE mode with SITEURL: {SITEURL}")
 
