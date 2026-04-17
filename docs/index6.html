@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Python Notes</title>
+
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://ashwinsuresh-ngr.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://ashwinsuresh-ngr.github.io/pynotes">Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/custom-exception-with-logging.html"><h3 class="article-title">Custom Exception With Logging</h3></a>
+<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">DataValidationError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="n">DataValidationError</span><span class="p">(</span><span class="s2">&quot;Invalid CSV column format&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">DataValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Validation Error Logged:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Validation Error Logged: Invalid CSV column format
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/custom-exception-with-logging.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/data-cleaning-pipeline.html"><h3 class="article-title">Data Cleaning Pipeline</h3></a>
+<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">raw</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;  apple &quot;</span><span class="p">,</span> <span class="s2">&quot; Banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry &quot;</span><span class="p">]</span>
+<span class="n">cleaned</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">raw</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/data-cleaning-pipeline.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/defining-a-class-with-attributes.html"><h3 class="article-title">Defining A Class With Attributes</h3></a>
+<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Alice
+25
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/defining-a-class-with-attributes.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/deleting-object-properties-and-objects.html"><h3 class="article-title">Deleting Object Properties And Objects</h3></a>
+<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Product</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">price</span>
+
+<span class="n">item</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="k">del</span> <span class="n">item</span><span class="o">.</span><span class="n">price</span>
+<span class="c1"># del item  # Deletes the object entirely</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/deleting-object-properties-and-objects.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/diamond-problem-exampl.html"><h3 class="article-title">Diamond Problem Exampl</h3></a>
+<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Grandparent</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello from Grandparent&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Parent1</span><span class="p">(</span><span class="n">Grandparent</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Parent2</span><span class="p">(</span><span class="n">Grandparent</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="p">(</span><span class="n">Parent1</span><span class="p">,</span> <span class="n">Parent2</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">Child</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">greet</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hello from Grandparent
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/diamond-problem-exampl.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/dictionary-creation-via-list-comprehension.html"><h3 class="article-title">Dictionary Creation Via List Comprehension</h3></a>
+<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">)}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/dictionary-creation-via-list-comprehension.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/difference-between-global-and-nonlocal.html"><h3 class="article-title">Difference Between Global And Nonlocal</h3></a>
+<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">outer</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">inner</span><span class="p">():</span>
+        <span class="k">global</span> <span class="n">x</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">99</span>
+
+    <span class="n">inner</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Outer x:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="n">outer</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Global x:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Outer x: 10
+Global x: 99
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/difference-between-global-and-nonlocal.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/duck-typing.html"><h3 class="article-title">Duck Typing</h3></a>
+<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Car</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Car moving&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Boat</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Boat sailing&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="n">vehicle</span><span class="p">):</span>
+    <span class="n">vehicle</span><span class="o">.</span><span class="n">move</span><span class="p">()</span>
+
+<span class="n">start</span><span class="p">(</span><span class="n">Car</span><span class="p">())</span>
+<span class="n">start</span><span class="p">(</span><span class="n">Boat</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Car moving
+Boat sailing
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/duck-typing.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/enclosingscope.html"><h3 class="article-title">Enclosingscope</h3></a>
+<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">outer</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">inner</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter1.html">chapter1</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/enclosingscope.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/exploring-module-content-with-dir.html"><h3 class="article-title">Exploring Module Content With Dir()</h3></a>
+<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">math</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s1">&#39;__doc__&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;__loader__&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;__name__&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;__package__&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;__spec__&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;acos&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;acosh&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;asin&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;asinh&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;atan&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;atan2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;atanh&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;cbrt&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ceil&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;comb&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;copysign&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;cos&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;cosh&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;degrees&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;dist&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;erf&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;erfc&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;exp&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;exp2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;expm1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;fabs&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;factorial&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;floor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;fma&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;fmod&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;frexp&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;fsum&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;gcd&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;hypot&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;inf&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;isclose&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;isfinite&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;isinf&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;isnan&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;isqrt&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;lcm&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ldexp&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;lgamma …</span></code></pre></div><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/exploring-module-content-with-dir.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+            <!-- /#posts-list -->
+<div class="pagination-centered">
+<h6 class="subheader">Page 6 of 20</h6>
+
+<p>
+            <a href="https://ashwinsuresh-ngr.github.io/pynotes/index5.html">&laquo; Prev</a>
+
+        <a href="https://ashwinsuresh-ngr.github.io/pynotes/index7.html">Next &raquo;</a>
+</p>
+</div>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter1.html">chapter1</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/check.html">check</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/math-work.html">math-work</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/ashwinsuresh-ngr">GitHub</a></li>
+            <li><a href="www.linkedin.com/in/ashwin-s-214a87302">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Python Notes by Ashwin</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

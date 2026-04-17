@@ -61,5 +61,5 @@ ARTICLE_SAVE_AS = '{slug}.html'
 
 THEME               = 'themes/zurb-F5-basic'
 
-IGNORE_FILES        = [".*", "*.swp", "*~"]  # Ignore hidden files and temporary files
+IGNORE_FILES        = [".*", "*.swp", "*~", "ch8_topic _1"]  # Ignore hidden files, temp files, and duplicate stub folder
 

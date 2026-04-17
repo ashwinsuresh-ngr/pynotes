@@ -51,18 +51,33 @@
 <h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
 </h6>
 
-Translations: 
-        <a href="https://ashwinsuresh-ngr.github.io/pynotes/constructor-inheritance.html">en</a>
 
-    <hr>
+    <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Parent</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="p">(</span><span class="n">Parent</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">Child</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Alice 25
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
 <p><strong>Score: 0</strong></p>
-<p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/ch8_topic-_1.html">ch8_topic _1</a>
+<p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
 
 
-Translations: 
-        <a href="https://ashwinsuresh-ngr.github.io/pynotes/constructor-inheritance.html">en</a>
 
 
 </article>
@@ -81,7 +96,6 @@ Translations:
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
             <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/basics.html">basics</a></li>
-            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/ch8_topic-_1.html">ch8_topic _1</a></li>
             <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter1.html">chapter1</a></li>
             <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/check.html">check</a></li>
             <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/math-work.html">math-work</a></li>
