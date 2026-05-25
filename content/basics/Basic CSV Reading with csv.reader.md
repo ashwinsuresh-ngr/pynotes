@@ -3,7 +3,7 @@ title: Basic Csv Reading With Csv.Reader
 date: 2026-04-17
 author: Your Name
 cell_count: 1
-score: 0
+score: 5
 ---
 
 ```python
@@ -17,4 +17,4 @@ with open("data.csv", "r") as file:
 
 
 ---
-**Score: 0**
+**Score: 5**

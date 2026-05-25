@@ -3,7 +3,7 @@ title: Renaming A Module Using As
 date: 2026-04-17
 author: Your Name
 cell_count: 2
-score: 0
+score: 10
 ---
 
 ```python
@@ -22,4 +22,4 @@ print(m.pi)     # Output: 3.141592653589793
 
 
 ---
-**Score: 0**
+**Score: 10**

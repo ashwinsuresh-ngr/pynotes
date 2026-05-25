@@ -3,7 +3,7 @@ title: Converting Csv Data Types
 date: 2026-04-17
 author: Your Name
 cell_count: 2
-score: 0
+score: 10
 ---
 
 ```python
@@ -39,4 +39,4 @@ with open("data.csv", "r") as file:
 
 
 ---
-**Score: 0**
+**Score: 10**

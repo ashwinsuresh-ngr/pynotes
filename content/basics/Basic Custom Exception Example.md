@@ -3,7 +3,7 @@ title: Basic Custom Exception Example
 date: 2026-04-17
 author: Your Name
 cell_count: 1
-score: 0
+score: 5
 ---
 
 ```python
@@ -19,4 +19,4 @@ process_value(-10)
 
 
 ---
-**Score: 0**
+**Score: 5**

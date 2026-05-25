@@ -3,7 +3,7 @@ title: Using Assertions (Assert)
 date: 2026-04-17
 author: Your Name
 cell_count: 1
-score: 0
+score: 5
 ---
 
 ```python
@@ -13,4 +13,4 @@ assert age >= 18, "User must be at least 18 years old"
 
 
 ---
-**Score: 0**
+**Score: 5**

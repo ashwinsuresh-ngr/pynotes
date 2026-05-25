@@ -3,7 +3,7 @@ title: Modifying Global Variable Without Global (Error Case)
 date: 2026-04-17
 author: Your Name
 cell_count: 3
-score: 0
+score: 15
 ---
 
 ```python
@@ -25,4 +25,4 @@ def update():
 
 
 ---
-**Score: 0**
+**Score: 15**

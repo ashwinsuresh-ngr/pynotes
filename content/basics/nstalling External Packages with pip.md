@@ -3,7 +3,7 @@ title: Nstalling External Packages With Pip
 date: 2026-04-17
 author: Your Name
 cell_count: 3
-score: 0
+score: 15
 ---
 
 ```python
@@ -26,4 +26,4 @@ print(response.status_code)
 
 
 ---
-**Score: 0**
+**Score: 15**

@@ -11,11 +11,9 @@ from pathlib import Path
 def calculate_score(cell_count):
     """
     Calculate the score based on the number of cells.
-    For every 5 cells, add 5 points. Score starts at 0 if less than 5 cells.
+    Each cell is worth 5 points.
     """
-    if cell_count < 5:
-        return 0
-    return (cell_count // 5) * 5
+    return cell_count * 5
 
 
 def update_markdown_scores(content_dir):

@@ -3,7 +3,7 @@ title: What Is A Csv File
 date: 2026-04-17
 author: Your Name
 cell_count: 1
-score: 0
+score: 5
 ---
 
 ```python
@@ -14,4 +14,4 @@ Bob,30,London
 
 
 ---
-**Score: 0**
+**Score: 5**

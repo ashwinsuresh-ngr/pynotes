@@ -4,15 +4,16 @@
 
 Scores are automatically calculated based on the number of code cells in each notebook:
 
-- **Formula**: `(cell_count // 5) * 5`
-- **Minimum**: 0 points (for notebooks with less than 5 cells)
-- **Increment**: 5 points for every 5 cells
+- **Formula**: `cell_count * 5`
+- **Each cell = 5 points**
 
 ### Examples:
-- 0-4 cells → Score: 0
-- 5-9 cells → Score: 5
-- 10-14 cells → Score: 10
-- 15-19 cells → Score: 15
+- 0 cells → Score: 0
+- 1 cell → Score: 5
+- 2 cells → Score: 10
+- 3 cells → Score: 15
+- 5 cells → Score: 25
+- 10 cells → Score: 50
 
 ## Updating Scores
 

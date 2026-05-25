@@ -3,7 +3,7 @@ title: Add-A-New-Column
 date: 2026-04-17
 author: Your Name
 cell_count: 10
-score: 10
+score: 50
 ---
 
 Add a New Column
@@ -170,4 +170,4 @@ df
 
 
 ---
-**Score: 10**
+**Score: 50**

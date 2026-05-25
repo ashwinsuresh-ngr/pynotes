@@ -3,7 +3,7 @@ title: Reading Csv Using Pandas (Advanced)
 date: 2026-04-17
 author: Your Name
 cell_count: 1
-score: 0
+score: 5
 ---
 
 ```python
@@ -15,4 +15,4 @@ print(df.head())
 
 
 ---
-**Score: 0**
+**Score: 5**

@@ -3,7 +3,7 @@ title: Comprehensive Operator Overloading Example
 date: 2026-04-17
 author: Your Name
 cell_count: 2
-score: 0
+score: 10
 ---
 
 ```python
@@ -38,4 +38,4 @@ print(c1 - c2)  # 7
 
 
 ---
-**Score: 0**
+**Score: 10**

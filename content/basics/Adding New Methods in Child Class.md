@@ -3,7 +3,7 @@ title: Adding New Methods In Child Class
 date: 2026-04-17
 author: Your Name
 cell_count: 2
-score: 0
+score: 10
 ---
 
 ```python
@@ -31,4 +31,4 @@ d.bark()
 
 
 ---
-**Score: 0**
+**Score: 10**
