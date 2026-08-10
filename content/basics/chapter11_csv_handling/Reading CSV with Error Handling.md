@@ -1,0 +1,23 @@
+---
+title: Reading Csv With Error Handling
+date: 2026-08-10
+author: Your Name
+cell_count: 1
+score: 5
+---
+
+```python
+import csv
+
+try:
+    with open("data.csv", "r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            print(row)
+except FileNotFoundError:
+    print("CSV file not found.")
+```
+
+
+---
+**Score: 5**

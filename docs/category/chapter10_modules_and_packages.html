@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Python Notes - chapter10_modules_and_packages</title>
+
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://ashwinsuresh-ngr.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://ashwinsuresh-ngr.github.io/pynotes">Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
+        
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/absolute-imports-in-packages.html"><h3 class="article-title">Absolute Imports In Packages</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">my_package.analytics.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">calculate_mean</span>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter10_modules_and_packages.html">chapter10_modules_and_packages</a>
+
+</p>
+
+
+
+            </article>
+
+
+                <hr  class="gradient"/>
+
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/built-in-modules-example.html"><h3 class="article-title">Built-In Modules Example</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
+
+<span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">today</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">2026</span><span class="o">-</span><span class="mf">01</span><span class="o">-</span><span class="mf">14</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter10_modules_and_packages.html">chapter10_modules_and_packages</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/built-in-modules-example.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/creating-a-basic-package.html"><h3 class="article-title">Creating A Basic Package</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># my_package/module1.py</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;Hello from module1&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># main.py</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">my_package.module1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">my_package</span><span class="o">.</span><span class="n">module1</span><span class="o">.</span><span class="n">greet</span><span class="p">())</span>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter10_modules_and_packages.html">chapter10_modules_and_packages</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/creating-a-basic-package.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/creating-and-using-a-custom-module.html"><h3 class="article-title">Creating And Using A Custom Module</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># file: calculator.py</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># main.py</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">calculator</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">calculator</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>  <span class="c1"># Output: 20</span>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter10_modules_and_packages.html">chapter10_modules_and_packages</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/creating-and-using-a-custom-module.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/exploring-module-content-with-dir.html"><h3 class="article-title">Exploring Module Content With Dir()</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">math</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s1">&#39;__doc__&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;__loader__&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;__name__&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;__package__&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;__spec__&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;acos&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;acosh&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;asin&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;asinh&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;atan&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;atan2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;atanh&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;cbrt&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ceil&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;comb&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;copysign&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;cos&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;cosh&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;degrees&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;dist&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;erf&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;erfc&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;exp&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;exp2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;expm1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;fabs&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;factorial&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;floor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;fma&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;fmod&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;frexp&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;fsum&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;gcd&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;hypot&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;inf&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;isclose&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;isfinite&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;isinf&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;isnan&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;isqrt&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;lcm&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ldexp&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;lgamma …</span></code></pre></div><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter10_modules_and_packages.html">chapter10_modules_and_packages</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/exploring-module-content-with-dir.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/importing-a-module.html"><h3 class="article-title">Importing A Module</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">))</span>  <span class="c1"># Output: 5.0</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">5.0</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter10_modules_and_packages.html">chapter10_modules_and_packages</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/importing-a-module.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/importing-from-a-package.html"><h3 class="article-title">Importing From A Package</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">my_package.module1</span><span class="w"> </span><span class="kn">import</span> <span class="n">greet</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">())</span>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter10_modules_and_packages.html">chapter10_modules_and_packages</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/importing-from-a-package.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/importing-specific-functions-from-a-module.html"><h3 class="article-title">Importing Specific Functions From A Module</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="nb">pow</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>     <span class="c1"># Output: 4.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>    <span class="c1"># Output: 8.0</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">4.0</span>
+<span class="mf">8.0</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter10_modules_and_packages.html">chapter10_modules_and_packages</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/importing-specific-functions-from-a-module.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/module-search-path-syspath.html"><h3 class="article-title">Module Search Path (Sys.Path)</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="err">&#39;</span><span class="nx">C</span><span class="p">:</span><span class="err">\\</span><span class="nx">Users</span><span class="err">\\</span><span class="nx">Ashwin</span><span class="err">\\</span><span class="nx">AppData</span><span class="err">\\</span><span class="nx">Local</span><span class="err">\\</span><span class="nx">Programs</span><span class="err">\\</span><span class="nx">Python</span><span class="err">\\</span><span class="nx">Python313</span><span class="err">\\</span><span class="nx">python313</span><span class="p">.</span><span class="nx">zip</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">C</span><span class="p">:</span><span class="err">\\</span><span class="nx">Users</span><span class="err">\\</span><span class="nx">Ashwin</span><span class="err">\\</span><span class="nx">AppData</span><span class="err">\\</span><span class="nx">Local</span><span class="err">\\</span><span class="nx">Programs</span><span class="err">\\</span><span class="nx">Python</span><span class="err">\\</span><span class="nx">Python313</span><span class="err">\\</span><span class="nx">DLLs</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">C</span><span class="p">:</span><span class="err">\\</span><span class="nx">Users</span><span class="err">\\</span><span class="nx">Ashwin</span><span class="err">\\</span><span class="nx">AppData</span><span class="err">\\</span><span class="nx">Local</span><span class="err">\\</span><span class="nx">Programs</span><span class="err">\\</span><span class="nx">Python</span><span class="err">\\</span><span class="nx">Python313</span><span class="err">\\</span><span class="nx">Lib</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">C</span><span class="p">:</span><span class="err">\\</span><span class="nx">Users</span><span class="err">\\</span><span class="nx">Ashwin</span><span class="err">\\</span><span class="nx">AppData</span><span class="err">\\</span><span class="nx">Local</span><span class="err">\\</span><span class="nx">Programs</span><span class="err">\\</span><span class="nx">Python</span><span class="err">\\</span><span class="nx">Python313</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">C</span><span class="p">:</span><span class="err">\\</span><span class="nx">Users</span><span class="err">\\</span><span class="nx">Ashwin</span><span class="err">\\</span><span class="nx">AppData</span><span class="err">\\</span><span class="nx">Local</span><span class="err">\\</span><span class="nx">Programs</span><span class="err">\\</span><span class="nx">Python</span><span class="err">\\</span><span class="nx">Python313</span><span class="err">\\</span><span class="nx">Lib …</span></code></pre></div><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter10_modules_and_packages.html">chapter10_modules_and_packages</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/module-search-path-syspath.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/nstalling-external-packages-with-pip.html"><h3 class="article-title">Nstalling External Packages With Pip</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://api.example.com&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 15</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter10_modules_and_packages.html">chapter10_modules_and_packages</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/nstalling-external-packages-with-pip.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+            <!-- /#posts-list -->
+<div class="pagination-centered">
+<h6 class="subheader">Page 1 of 2</h6>
+
+<p>
+
+        <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter10_modules_and_packages2.html">Next &raquo;</a>
+</p>
+</div>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter1.html">chapter1</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter10_modules_and_packages.html">chapter10_modules_and_packages</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter11_csv_handling.html">chapter11_csv_handling</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter12_file_handling.html">chapter12_file_handling</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter13_global_and_scope.html">chapter13_global_and_scope</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter14_main_function.html">chapter14_main_function</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter1_oop_basics.html">chapter1_oop_basics</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter2_inheritance.html">chapter2_inheritance</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter3_multiple_inheritance.html">chapter3_multiple_inheritance</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter4_polymorphism.html">chapter4_polymorphism</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter5_operator_overloading.html">chapter5_operator_overloading</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter6_exception_handling.html">chapter6_exception_handling</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter7_custom_exceptions.html">chapter7_custom_exceptions</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter8_recursion.html">chapter8_recursion</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter9_list_comprehension.html">chapter9_list_comprehension</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/math-work.html">math-work</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/misc.html">misc</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/ashwinsuresh-ngr">GitHub</a></li>
+            <li><a href="www.linkedin.com/in/ashwin-s-214a87302">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Python Notes by Ashwin</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

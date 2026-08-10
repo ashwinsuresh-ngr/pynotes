@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Python Notes - chapter3_multiple_inheritance</title>
+
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://ashwinsuresh-ngr.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://ashwinsuresh-ngr.github.io/pynotes">Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
+        
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/basic-multiple-inheritance-structure.html"><h3 class="article-title">Basic Multiple Inheritance Structure</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">show_a</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Class A&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">show_b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Class B&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">C</span><span class="p">()</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">show_a</span><span class="p">()</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">show_b</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Class A
+Class B
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter3_multiple_inheritance.html">chapter3_multiple_inheritance</a>
+
+</p>
+
+
+
+            </article>
+
+
+                <hr  class="gradient"/>
+
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/cooperative-multiple-inheritance-using-super.html"><h3 class="article-title">Cooperative Multiple Inheritance Using Super</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A init&quot;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B init&quot;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C init&quot;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">C</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>C init
+A init
+B init
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter3_multiple_inheritance.html">chapter3_multiple_inheritance</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/cooperative-multiple-inheritance-using-super.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/diamond-problem-exampl.html"><h3 class="article-title">Diamond Problem Exampl</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Grandparent</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello from Grandparent&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Parent1</span><span class="p">(</span><span class="n">Grandparent</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Parent2</span><span class="p">(</span><span class="n">Grandparent</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="p">(</span><span class="n">Parent1</span><span class="p">,</span> <span class="n">Parent2</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">Child</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">greet</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hello from Grandparent
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter3_multiple_inheritance.html">chapter3_multiple_inheritance</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/diamond-problem-exampl.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/method-resolution-order-mro.html"><h3 class="article-title">Method Resolution Order (Mro)</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">C</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">mro</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>B
+[&lt;class &#39;__main__.C&#39;&gt;, &lt;class &#39;__main__.B&#39;&gt;, &lt;class &#39;__main__.A&#39;&gt;, &lt;class &#39;object&#39;&gt;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter3_multiple_inheritance.html">chapter3_multiple_inheritance</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/method-resolution-order-mro.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/multiple-inheritance.html"><h3 class="article-title">Multiple Inheritance</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Father</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">skill</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Driving&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Mother</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">talent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cooking&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="p">(</span><span class="n">Father</span><span class="p">,</span> <span class="n">Mother</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">Child</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">skill</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">talent</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Driving
+Cooking
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter3_multiple_inheritance.html">chapter3_multiple_inheritance</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/multiple-inheritance.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/multiple-inheritance-with-constructors.html"><h3 class="article-title">Multiple Inheritance With Constructors</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Constructor A&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Constructor B&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">C</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Constructor A
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter3_multiple_inheritance.html">chapter3_multiple_inheritance</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/multiple-inheritance-with-constructors.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/overlapping-method-names.html"><h3 class="article-title">Overlapping Method Names</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;From A&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;From B&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">C</span><span class="p">()</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>From A
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter3_multiple_inheritance.html">chapter3_multiple_inheritance</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/overlapping-method-names.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/real-world-multiple-inheritance-example.html"><h3 class="article-title">Real-World Multiple Inheritance Example</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Logger</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Logging data&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Validator</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Validating data&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Service</span><span class="p">(</span><span class="n">Logger</span><span class="p">,</span> <span class="n">Validator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Executing service&quot;</span><span class="p">)</span>
+
+<span class="n">service</span> <span class="o">=</span> <span class="n">Service</span><span class="p">()</span>
+<span class="n">service</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Logging data
+Validating data
+Executing service
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter3_multiple_inheritance.html">chapter3_multiple_inheritance</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/real-world-multiple-inheritance-example.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/understanding-method-resolution-order.html"><h3 class="article-title">Understanding Method Resolution Order</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">mro</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&lt;class &#39;__main__.C&#39;&gt;, &lt;class &#39;__main__.A&#39;&gt;, &lt;class &#39;__main__.B&#39;&gt;, &lt;class &#39;object&#39;&gt;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter3_multiple_inheritance.html">chapter3_multiple_inheritance</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/understanding-method-resolution-order.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/what-is-multiple-inheritance.html"><h3 class="article-title">What Is Multiple Inheritance</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Father</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">skill1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Driving&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Mother</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">skill2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cooking&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="p">(</span><span class="n">Father</span><span class="p">,</span> <span class="n">Mother</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">Child</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">skill1</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">skill2</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Driving
+Cooking
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter3_multiple_inheritance.html">chapter3_multiple_inheritance</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/what-is-multiple-inheritance.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+            <!-- /#posts-list -->
+<div class="pagination-centered">
+<h6 class="subheader">Page 1 of 1</h6>
+
+<p>
+
+</p>
+</div>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter1.html">chapter1</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter10_modules_and_packages.html">chapter10_modules_and_packages</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter11_csv_handling.html">chapter11_csv_handling</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter12_file_handling.html">chapter12_file_handling</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter13_global_and_scope.html">chapter13_global_and_scope</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter14_main_function.html">chapter14_main_function</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter1_oop_basics.html">chapter1_oop_basics</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter2_inheritance.html">chapter2_inheritance</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter3_multiple_inheritance.html">chapter3_multiple_inheritance</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter4_polymorphism.html">chapter4_polymorphism</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter5_operator_overloading.html">chapter5_operator_overloading</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter6_exception_handling.html">chapter6_exception_handling</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter7_custom_exceptions.html">chapter7_custom_exceptions</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter8_recursion.html">chapter8_recursion</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter9_list_comprehension.html">chapter9_list_comprehension</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/math-work.html">math-work</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/misc.html">misc</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/ashwinsuresh-ngr">GitHub</a></li>
+            <li><a href="www.linkedin.com/in/ashwin-s-214a87302">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Python Notes by Ashwin</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

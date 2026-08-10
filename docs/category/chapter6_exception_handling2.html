@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Python Notes - chapter6_exception_handling</title>
+
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://ashwinsuresh-ngr.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://ashwinsuresh-ngr.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://ashwinsuresh-ngr.github.io/pynotes">Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/structured-exception-handling.html"><h3 class="article-title">Structured Exception Handling</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+    <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Division by zero error&quot;</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Invalid input type&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">divide</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Division by zero error
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter6_exception_handling.html">chapter6_exception_handling</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/structured-exception-handling.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/using-assertions-assert.html"><h3 class="article-title">Using Assertions (Assert)</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="k">assert</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;User must be at least 18 years old&quot;</span>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter6_exception_handling.html">chapter6_exception_handling</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/using-assertions-assert.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/using-else-with-tryexcept.html"><h3 class="article-title">Using Else With Try...Except</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;10&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Conversion failed&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Conversion successful:&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Conversion successful: 10
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter6_exception_handling.html">chapter6_exception_handling</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/using-else-with-tryexcept.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/using-finally-block.html"><h3 class="article-title">Using Finally Block</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File not found&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Execution completed&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>File not found
+Execution completed
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter6_exception_handling.html">chapter6_exception_handling</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/using-finally-block.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/using-tryexceptfinally.html"><h3 class="article-title">Using Try...Except...Finally</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File not found&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cleanup operations executed&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>File not found
+Cleanup operations executed
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter6_exception_handling.html">chapter6_exception_handling</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/using-tryexceptfinally.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://ashwinsuresh-ngr.github.io/pynotes/what-is-an-exception.html"><h3 class="article-title">What Is An Exception</h3></a>
+<h6 class="subheader" title="2026-08-10T00:00:00-04:00">Mon 10 August 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">/</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Raises ZeroDivisionError</span>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter6_exception_handling.html">chapter6_exception_handling</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://ashwinsuresh-ngr.github.io/pynotes/what-is-an-exception.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+            <!-- /#posts-list -->
+<div class="pagination-centered">
+<h6 class="subheader">Page 2 of 2</h6>
+
+<p>
+            <a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter6_exception_handling.html">&laquo; Prev</a>
+
+</p>
+</div>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter1.html">chapter1</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter10_modules_and_packages.html">chapter10_modules_and_packages</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter11_csv_handling.html">chapter11_csv_handling</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter12_file_handling.html">chapter12_file_handling</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter13_global_and_scope.html">chapter13_global_and_scope</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter14_main_function.html">chapter14_main_function</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter1_oop_basics.html">chapter1_oop_basics</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter2_inheritance.html">chapter2_inheritance</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter3_multiple_inheritance.html">chapter3_multiple_inheritance</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter4_polymorphism.html">chapter4_polymorphism</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter5_operator_overloading.html">chapter5_operator_overloading</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter6_exception_handling.html">chapter6_exception_handling</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter7_custom_exceptions.html">chapter7_custom_exceptions</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter8_recursion.html">chapter8_recursion</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/chapter9_list_comprehension.html">chapter9_list_comprehension</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/math-work.html">math-work</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/misc.html">misc</a></li>
+            <li><a href="https://ashwinsuresh-ngr.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/ashwinsuresh-ngr">GitHub</a></li>
+            <li><a href="www.linkedin.com/in/ashwin-s-214a87302">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Python Notes by Ashwin</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

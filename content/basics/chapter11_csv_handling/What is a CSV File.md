@@ -1,0 +1,17 @@
+---
+title: What Is A Csv File
+date: 2026-08-10
+author: Your Name
+cell_count: 1
+score: 5
+---
+
+```python
+name,age,city
+Alice,25,New York
+Bob,30,London
+```
+
+
+---
+**Score: 5**
